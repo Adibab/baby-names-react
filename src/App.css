@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+
+.babyCardContainer{
+  display: grid;
+   grid-template-columns: repeat(5, 1fr); 
+  align-items: center;
+  grid-gap: 1px; 
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  flex-wrap: wrap;
+  border: 2px solid red;
+  padding: 5rem;
+}
+
+.babyCard {
+  border-radius: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+}
+.babyCard:hover {
+  box-shadow: #5a171744 0px 2px 20px 0px;
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.f{
+  background-color: rgb(228, 6, 132);
+}
+.m{
+  background-color: rgb(8, 8, 95);
+}
+.f , .m{
+  color: white;
+}
