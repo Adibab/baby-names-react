@@ -1,17 +1,6 @@
 import React from "react";
-import { useState } from "react";
 
-function SearchBabyNames({ babyNames }) {
-  const [searchBabyNames, setSearchBabyNames] = useState([]);
-  function searchFunc(event) {
-    const searchWord = event.target.value.toLowerCase();
-
-    const newFilter = babyNames.filter((eachBaby) =>
-      eachBaby.name.toLowerCase().includes(searchWord)
-    );
-    setSearchBabyNames(newFilter);
-  }
-
+function SearchBabyNames({ searchFunc }) {
   return (
     <div>
       <section className="searchSection">
@@ -23,11 +12,6 @@ function SearchBabyNames({ babyNames }) {
           onChange={searchFunc}
         />
       </section>
-      {searchBabyNames.length !== 0 && (
-        <div>
-          {searchBabyNames.map((eachBaby) => eachBaby.name)}
-        </div>
-      )}
     </div>
   );
 }

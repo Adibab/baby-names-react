@@ -1,10 +1,10 @@
 import React from "react";
 import BabyCard from "./BabyCard";
 
-const BabyNamesForMainSection = ({ babyNames, sortedName }) => {
+const BabyNamesForMainSection = ({ babyNamesResults }) => {
   return (
     <div className="babyCardContainer">
-      {babyNames
+      {babyNamesResults
         .sort((a, b) => a.name.localeCompare(b.name))
         .map((eachBaby) => (
           <BabyCard key={eachBaby.id} eachBaby={eachBaby} />
