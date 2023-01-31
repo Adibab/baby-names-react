@@ -79,3 +79,21 @@ h1 {
 .m {
   color: white;
 }
+
+
+.searchSection {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  /* border: 2px solid black; */
+}
+
+#nameSearch {
+  border: none;
+  box-shadow: #5a171738 0px 2px 29px 0px;
+  border-radius: 50px;
+  padding: 1rem;
+}
+#nameSearch:focus {
+  outline: none;
+}
