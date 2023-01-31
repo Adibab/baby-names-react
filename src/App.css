@@ -1,54 +1,57 @@
 .App {
-  text-align: center;
+  background-color: white;
 }
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 80px;
+  mix-blend-mode: multiply;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #dccfcf;
+  height: 50px;
+  padding: 20px;
+  color: rgb(29, 22, 22);
+  text-align: left;
+  font-family: "Bangers", cursive;
+  font-size: 1em;
+  font-weight: bold;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: space-between;
+  align-items:center;
 }
 
 
-.babyCardContainer{
+
+
+h1 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 2px;
+  color: #0e0707;
+  text-align: center;
+}
+
+.babyCardContainer {
   display: grid;
-   grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   align-items: center;
-  grid-gap: 1px; 
-  width: 80vw;
-  height: auto;
+  grid-gap: 1px;
+  width: 95vw;
   margin: auto;
-  flex-wrap: wrap;
-  border: 2px solid red;
-  padding: 5rem;
+  /* flex-wrap: wrap; */
+  /* border: 2px solid red; */
+  padding: 0.5rem;
 }
 
 .babyCard {
@@ -58,18 +61,21 @@
   transition: all 0.5s ease;
   display: flex;
   justify-content: center;
+  height: 50%;
+  width: 80%;
 }
 .babyCard:hover {
   box-shadow: #5a171744 0px 2px 20px 0px;
   transform: translateY(-2px);
   opacity: 0.9;
 }
-.f{
+.f {
   background-color: rgb(228, 6, 132);
 }
-.m{
+.m {
   background-color: rgb(8, 8, 95);
 }
-.f , .m{
+.f,
+.m {
   color: white;
 }
