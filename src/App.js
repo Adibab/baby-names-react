@@ -24,12 +24,12 @@ function App() {
     return setFavouriteBaby(favouriteNameList)
   };
 
-  const removeFromList = (id) => {
-    const newBabyNamesList = babyNamesData.filter(
-      (eachBaby) => eachBaby.id !== id
-    );
-    setBabyNamesData(newBabyNamesList);
-  };
+  // const removeFromList = (id) => {
+  //   const newBabyNamesList = babyNamesData.filter(
+  //     (eachBaby) => eachBaby.id !== id
+  //   );
+  //   setBabyNamesData(newBabyNamesList);
+  // };
 
   return (
     <div className="App">
