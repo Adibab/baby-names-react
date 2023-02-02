@@ -5,7 +5,10 @@ const BabyCard = ({ eachBaby, pickFavouriteBaby, removeFromList}) => {
   return (
     <article
       className={`babyCard ${eachBaby.sex}`}
-      onClick={() => {pickFavouriteBaby(eachBaby.id); removeFromList(eachBaby.id)}}
+      onClick={() => {pickFavouriteBaby(eachBaby.id); 
+        // removeFromList(eachBaby.id)
+      }
+      }
     >
       {eachBaby.name}
     </article>

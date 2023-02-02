@@ -46,7 +46,7 @@ function App() {
       <BabyNamesForMainSection
         babyNamesResults={babyNamesData}
         pickFavouriteBaby={pickFavouriteBaby}
-        removeFromList={removeFromList}
+        // removeFromList={removeFromList}
       />
     </div>
   );

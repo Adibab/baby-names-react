@@ -18,7 +18,7 @@ const BabyNamesForMainSection = ({
             key={eachBaby.id}
             eachBaby={eachBaby}
             pickFavouriteBaby={pickFavouriteBaby}
-            removeFromList={removeFromList}
+            // removeFromList={removeFromList}
           />
         ))}
     </div>
