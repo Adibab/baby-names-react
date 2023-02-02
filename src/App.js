@@ -19,17 +19,20 @@ function App() {
 
   const [favouriteBaby, setFavouriteBaby] = useState([]);
 
-  const pickFavouriteBaby = (id) => {
-    const favouriteNameList = favouriteBaby.concat([id]);
-    return setFavouriteBaby(favouriteNameList)
+  const pickFavouriteBaby = (babyObj) => {
+    // saving the full baby obj tot he setFavouriteBaby  & ...favouriteBaby is carrying the previous baby object & current selected babyObject
+   setFavouriteBaby([...favouriteBaby, babyObj]);
+  //  console.log(babyObj)
+   
   };
+  // console.log(...favouriteBaby)
 
-  // const removeFromList = (id) => {
-  //   const newBabyNamesList = babyNamesData.filter(
-  //     (eachBaby) => eachBaby.id !== id
-  //   );
-  //   setBabyNamesData(newBabyNamesList);
-  // };
+  const removeBabyFrmMainList = (id) => {
+    const newBabyNamesList = babyNamesData.filter(
+      (eachBaby) => eachBaby.id !== id
+    );
+    setBabyNamesData(newBabyNamesList);
+  };
 
   return (
     <div className="App">
@@ -46,7 +49,7 @@ function App() {
       <BabyNamesForMainSection
         babyNamesResults={babyNamesData}
         pickFavouriteBaby={pickFavouriteBaby}
-        // removeFromList={removeFromList}
+        removeBabyFrmMainList={removeBabyFrmMainList}
       />
     </div>
   );

@@ -1,27 +1,28 @@
 import React from "react";
+function FavouriteNamesBaby({ favouriteBaby, babyNamesResults }) {
 
-
-function FavouriteNamesBaby({
-  favouriteBaby,
-  babyNamesResults,
-}) {
-  const nameList = favouriteBaby.map((id) => {
-    const { name, sex } = babyNamesResults[id];
-    // console.log(name , sex)
+  
+  // console.log(favouriteBaby)
+  const nameList = favouriteBaby.map((babyObj) => {
+    const { name, sex } = babyObj;
+    //  console.log(name , sex)
     return (
-      <article key={id} className={`babyCard ${sex}`}>
+      <article key={babyObj.id} className={`babyCard ${sex}`}>
         {name}
       </article>
     );
   });
-  //  console.log(favouriteBaby);
 
   return (
-    <div>
+    <div >
       <h4>Favourite Baby Names :</h4>
-      <ul className="babyCard">{nameList} </ul>
+      <ul className="babyCard">
+        {nameList}
+        {/* {console.log(nameList)} */}
+      </ul>
+      
     </div>
   );
 }
 
-export default FavouriteNamesBaby
+export default FavouriteNamesBaby;

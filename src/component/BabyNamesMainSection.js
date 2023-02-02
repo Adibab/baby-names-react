@@ -3,12 +3,9 @@ import BabyCard from "./BabyCard";
 
 const BabyNamesForMainSection = ({
   babyNamesResults,
-  pickFavouriteBaby, 
-  removeFromList
+  pickFavouriteBaby,
+  removeBabyFrmMainList,
 }) => {
-
-
-
   return (
     <div className="babyCardContainer">
       {babyNamesResults
@@ -18,7 +15,7 @@ const BabyNamesForMainSection = ({
             key={eachBaby.id}
             eachBaby={eachBaby}
             pickFavouriteBaby={pickFavouriteBaby}
-            // removeFromList={removeFromList}
+            removeBabyFrmMainList={removeBabyFrmMainList}
           />
         ))}
     </div>
