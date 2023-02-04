@@ -21,9 +21,8 @@ function App() {
 
   const pickFavouriteBaby = (babyObj) => {
     // saving the full baby obj tot he setFavouriteBaby  & ...favouriteBaby is carrying the previous baby object & current selected babyObject
-   setFavouriteBaby([...favouriteBaby, babyObj]);
-  //  console.log(babyObj)
-   
+    setFavouriteBaby([...favouriteBaby, babyObj]);
+    //  console.log(babyObj)
   };
   // console.log(...favouriteBaby)
 
@@ -34,6 +33,19 @@ function App() {
     setBabyNamesData(newBabyNamesList);
   };
 
+  // console.log(babyNamesData)
+  function removeBabyFrmFavList(baby) {
+    const filteredBabyList = favouriteBaby.filter(
+      (eachBaby) => eachBaby.id !== baby.id
+    );
+    setFavouriteBaby(filteredBabyList);
+    const addObj = baby;
+    //  console.log(addObj);
+    //  const indexOfBaby = babyNamesData.findIndex((eachBaby) => eachBaby.addObj )
+    //  console.log(indexOfBaby)
+    setBabyNamesData(...babyNamesData.unshift(addObj));
+  }
+
   return (
     <div className="App">
       <Heading />
@@ -42,6 +54,7 @@ function App() {
       <FavouriteNamesBaby
         favouriteBaby={favouriteBaby}
         babyNamesResults={babyNamesData}
+        removeBabyFrmFavList={removeBabyFrmFavList}
       />
 
       <h1> Choose a name for you future... </h1>

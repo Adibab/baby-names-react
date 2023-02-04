@@ -1,26 +1,31 @@
 import React from "react";
-function FavouriteNamesBaby({ favouriteBaby, babyNamesResults }) {
-
-  
-  // console.log(favouriteBaby)
+function FavouriteNamesBaby({
+  favouriteBaby,
+  babyNamesResults,
+  removeBabyFrmFavList,
+}) {
+  // console.log(favouriteBaby);
   const nameList = favouriteBaby.map((babyObj) => {
     const { name, sex } = babyObj;
     //  console.log(name , sex)
     return (
-      <article key={babyObj.id} className={`babyCard ${sex}`}>
+      <article
+        key={babyObj.id}
+        className={`babyCard ${sex}`}
+        onClick={() => removeBabyFrmFavList(babyObj)}
+      >
         {name}
       </article>
     );
   });
 
   return (
-    <div >
+    <div>
       <h4>Favourite Baby Names :</h4>
-      <ul className="babyCard">
+      <ul className="babyCard" onClick={() => nameList}>
         {nameList}
         {/* {console.log(nameList)} */}
       </ul>
-      
     </div>
   );
 }
