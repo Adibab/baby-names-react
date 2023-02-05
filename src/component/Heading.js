@@ -6,10 +6,10 @@ function Heading() {
       <header className="App-header">
         <img
           className="App-logo "
-          src="https://freesvg.org/img/baby_winter_wear.png"
+          src="https://w7.pngwing.com/pngs/888/446/png-transparent-blue-and-orange-bassinet-stroller-illustration-infant-drawing-shopping-cart-baby-transport-painting-baby-shower-food-orange-boy-thumbnail.png"
           alt="baby logo"
         />
-        Our future ...
+        <h4> Our future ... </h4>
       </header>
     ); }
 export default Heading

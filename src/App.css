@@ -7,9 +7,14 @@
     box-sizing: border-box;
 } */
 
+body {
+  font-family: "Bangers", cursive;
+}
 .App-logo {
   height: 80px;
   mix-blend-mode: multiply;
+  box-shadow: #5a171738 0px 2px 29px 0px;
+  border-radius: 50px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -29,16 +34,17 @@
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 }
 
-
-
-
 h1 {
-  font-family: "Bangers", cursive;
+  /* font-family: "Bangers", cursive; */
   letter-spacing: 2px;
   color: #0e0707;
+  text-align: center;
+}
+h4 {
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -71,30 +77,41 @@ h1 {
 }
 .f {
   background-color: rgb(228, 6, 132);
+  margin: 5px 5px;
 }
 .m {
   background-color: rgb(8, 8, 95);
+  margin: 5px 5px;
 }
 .f,
 .m {
   color: white;
 }
 
-
 .searchSection {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   margin: 1rem auto;
   /* border: 2px solid black; */
+  mix-blend-mode: multiply;
 }
 
 #nameSearch {
   border: none;
-  box-shadow: #5a171738 0px 2px 29px 0px;
+  box-shadow: #5a171738 0 3px 10px 0px;
   border-radius: 50px;
   padding: 1rem;
+  width: 15rem;
 }
 #nameSearch:focus {
   outline: none;
 }
-
+.serachBaby {
+  cursor: pointer;
+  height: 50px;
+  margin: 0.5rem;
+  mix-blend-mode: multiply;
+  box-shadow: #5a171738 0 3px 10px 0px;
+  border-radius: 20px;
+}

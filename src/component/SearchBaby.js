@@ -1,9 +1,9 @@
 import React from "react";
 
-function SearchBabyNames({ searchFunc }) {
+function SearchBabyNames({ searchFunc, filterSex, babyNamesResults }) {
   return (
-    <div>
-      <section className="searchSection">
+    <div className="searchSection">
+      <section>
         <input
           type="text"
           name="nameSearch"
@@ -12,6 +12,7 @@ function SearchBabyNames({ searchFunc }) {
           onChange={searchFunc}
         />
       </section>
+      
     </div>
   );
 }
