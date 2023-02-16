@@ -75,6 +75,9 @@ h4 {
   transform: translateY(-2px);
   opacity: 0.9;
 }
+.favcard{
+  width: 10%;
+}
 .f {
   background-color: rgb(228, 6, 132);
   margin: 5px 5px;

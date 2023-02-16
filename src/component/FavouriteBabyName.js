@@ -11,7 +11,7 @@ function FavouriteNamesBaby({
     return (
       <article
         key={babyObj.id}
-        className={`babyCard ${sex}`}
+        className={`babyCard ${sex} favcard`}
         onClick={() => removeBabyFrmFavList(babyObj)}
       >
         {name}

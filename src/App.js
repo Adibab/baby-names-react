@@ -9,6 +9,8 @@ import FavouriteNamesBaby from "./component/FavouriteBabyName";
 
 function App() {
   const [babyNamesData, setBabyNamesData] = useState(babyNames);
+  console.log(babyNamesData)
+  console.log(babyNames)
 
   function searchFunc(event = "") {
     setBabyNamesData(() => {
@@ -40,14 +42,19 @@ function App() {
       (eachBaby) => eachBaby.id !== baby.id
     );
     setFavouriteBaby(filteredBabyList);
-    // console.log(baby)
-    const addObj = baby;
-    //  console.log(addObj);
-    //  const indexOfBaby = babyNamesData.filter((eachBaby) => eachBaby.id === baby.id)
-    //  console.log(indexOfBaby)
+    console.log(baby);
+    const getDeletedBabyObjId = baby.id;
+    console.log(getDeletedBabyObjId);
 
     // currently the object is adding back to the end of array but i want o add it on its original position
-    setBabyNamesData([...babyNamesData, addObj]);
+    // setBabyNamesData([
+    //   ...babyNamesData, baby
+    // ]);
+
+    // babyNamesMainSection is a state of an array of objects. Each object contains the id as a key, corresponding to the index of the object in the array. so get the  deleted aby object id from the favorites section, trying to reinserting the object back into the array and update state
+
+    setBabyNamesData([...babyNamesData.splice(getDeletedBabyObjId, 0, baby)]);
+     console.log(babyNamesData);
   }
 function filterSex ( sex = ""){
   setBabyNamesData(()=> babyNames.filter((eachBaby)=> eachBaby.sex.includes(sex)))
