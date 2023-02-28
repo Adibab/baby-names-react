@@ -25,7 +25,7 @@ body {
 
 .App-header {
   background-color: #dccfcf;
-  height: 50px;
+  height: 100px;
   padding: 20px;
   color: rgb(29, 22, 22);
   text-align: left;
@@ -50,14 +50,15 @@ h4 {
 
 .babyCardContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
   grid-gap: 1px;
-  width: 95vw;
+  width: 80vw;
   margin: auto;
   /* flex-wrap: wrap; */
   /* border: 2px solid red; */
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 
 .babyCard {
@@ -67,17 +68,17 @@ h4 {
   transition: all 0.5s ease;
   display: flex;
   justify-content: center;
-  height: 50%;
-  width: 80%;
-}
+   /* height: 50%; */
+  /* width: 10%;  */
+} 
 .babyCard:hover {
   box-shadow: #5a171744 0px 2px 20px 0px;
   transform: translateY(-2px);
   opacity: 0.9;
 }
-.favcard{
+/* .favcard{
   width: 10%;
-}
+} */
 .f {
   background-color: rgb(228, 6, 132);
   margin: 5px 5px;
@@ -100,6 +101,7 @@ h4 {
   mix-blend-mode: multiply;
 }
 
+
 #nameSearch {
   border: none;
   box-shadow: #5a171738 0 3px 10px 0px;
@@ -118,3 +120,7 @@ h4 {
   box-shadow: #5a171738 0 3px 10px 0px;
   border-radius: 20px;
 }
+ .ul{
+ margin: 0 10rem;
+ /* border: 2px solid salmon; */
+ }

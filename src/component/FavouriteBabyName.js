@@ -21,8 +21,8 @@ function FavouriteNamesBaby({
 
   return (
     <div>
-      <h4>Click some names below to add to your Favourite List ... </h4>
-      <ul className="babyCard" onClick={() => nameList}>
+      <h1>Click some names below to add to your Favourite List ... </h1>
+      <ul className="babyCard ul" onClick={() => nameList}>
         {nameList}
         {/* {console.log(nameList)} */}
       </ul>

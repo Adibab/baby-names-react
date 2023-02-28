@@ -9,8 +9,8 @@ import FavouriteNamesBaby from "./component/FavouriteBabyName";
 
 function App() {
   const [babyNamesData, setBabyNamesData] = useState(babyNames);
-  console.log(babyNamesData)
-  console.log(babyNames)
+  // console.log(babyNamesData)
+  // console.log(babyNames)
 
   function searchFunc(event = "") {
     setBabyNamesData(() => {
@@ -53,8 +53,17 @@ function App() {
 
     // babyNamesMainSection is a state of an array of objects. Each object contains the id as a key, corresponding to the index of the object in the array. so get the  deleted aby object id from the favorites section, trying to reinserting the object back into the array and update state
 
-    setBabyNamesData([...babyNamesData.splice(getDeletedBabyObjId, 0, baby)]);
-     console.log(babyNamesData);
+    // setBabyNamesData([...babyNamesData.splice(getDeletedBabyObjId, 0, baby)]);
+    //  console.log(babyNamesData);
+
+const copyNames = [...babyNamesData];
+console.log(babyNamesData, "original before splice");
+console.log(copyNames, "copy before splice");
+copyNames.splice(getDeletedBabyObjId, 0, baby);
+ console.log(copyNames, "copy after splice");
+ console.log(babyNamesData, "original after splice");
+setBabyNamesData(copyNames);
+
   }
 function filterSex ( sex = ""){
   setBabyNamesData(()=> babyNames.filter((eachBaby)=> eachBaby.sex.includes(sex)))
